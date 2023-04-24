@@ -22,6 +22,11 @@ header {
    background-color: black;
 }
 
+header input.menu-btn,
+header label.menu-icon {
+    display: none; /* ← hides hamburger icon */
+}
+
 header img {
    width: 250px;
    margin: 2em 1em;
@@ -38,18 +43,21 @@ nav ul {
 
 nav ul li {
    text-align: center;
+   padding: 0 1rem;
 }
 
 nav a {
-   padding: 1em 2em;
+   padding: 1em 2rem;
    display: block;
    color: white;
    text-decoration: none;
    font-size: 140%;
    transition: all .5s ease;
+   border-radius: 1rem;
 }
 
-nav a:hover {
+nav a:hover,
+.current {
    background-color: crimson;
 }
 
@@ -116,6 +124,9 @@ div.hours {
    font-size: 25px;
    margin-top: .5em;
 }
+
+/* HOME GRID */
+/* ------------------------------------------------ */
 
 div.homegrid {
    display: grid;
@@ -205,6 +216,15 @@ div.menulinks {
    max-width: 960px;
    padding-top: 2em;
    margin: 0 auto;
+   font-size: 150%;
+}
+
+.menulinks a {
+   color: black;
+}
+
+.menulinks a:hover {
+   color: crimson;
 }
 
 .mainh1 {
@@ -231,11 +251,11 @@ div.items {
 
 .items dl dt {
    font-size: 130%;
-   padding-bottom: .5em;
+   padding-bottom: .2em;
 }
 
 .items dl dd {
-   padding-bottom: 1em;
+   padding-bottom: 1.5em;
    font-weight: 100;
 }
 
@@ -264,6 +284,16 @@ section.col2 {
    grid-column: 2/3;
 }
 
+h3.pdf {
+   display: inline-block;
+   font-size: 150%;
+   background-color: crimson;
+   padding: 1.5rem;
+   margin-bottom: 2rem;
+   border-radius: 2rem;
+   color: white;
+}
+
 /* EVENTS */
 /* --------------------------------------- */
 
@@ -276,12 +306,12 @@ div.info {
 
 .info h2 {
    font-family: 'Bebas Neue', cursive;
-   font-size: 180%;
+   font-size: 230%;
    padding: .5rem 0;
 } 
 
 .info h3 {
-   font-size: 150%;
+   font-size: 130%;
    padding-bottom: .5rem;
 }
 
@@ -310,18 +340,46 @@ div.info {
    font-weight: 100;
 }
 
+.info dl dd {
+   padding-bottom: 1em;
+   font-weight: lighter;
+   font-size: 90%;
+}
+
 /* ABOUT */
 /* --------------------------------------- */
 
+.info p {
+   font-size: 115%;
+   line-height: 1.5;
+}
 
+img.img1 {
+   float: right;
+   margin: 2rem;
+   border: 5px solid black;
+}
+
+img.img2 {
+   float: left;
+   margin: 2rem;
+   border: 5px solid black;
+}
+
+img.interior {
+   display: block;
+   margin: 0 auto;
+   width: 30%;
+   border: 5px solid black;
+}
 
 /* FOOTER */
 /* --------------------------------------- */
 
 footer {
-   clear: both;
+   display: flex;
+   justify-content: space-around;
    padding: 2em;
-   text-align: center;
    background-color: black;
 }
 
@@ -338,4 +396,9 @@ footer a:hover {
 
 footer i {
    color: white;
+   font-size: 140%;
+}
+
+footer i:hover {
+   color: crimson;
 }
